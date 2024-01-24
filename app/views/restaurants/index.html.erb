@@ -1,0 +1,13 @@
+<h1>Restaurants's Index</h1>
+<div id="restaurants" >
+  <% @restaurants.each do |restaurant| %>
+    <%= restaurant.name %>
+    <p>
+      <%= link_to "See details", restaurant_path(restaurant) %>
+    </p>
+
+  <% end %>
+   <p>
+      <%= link_to "➕Add Restaurant", new_restaurant_path, class: "btn btn-primary" %>
+    </p>
+</div>
